@@ -67,6 +67,11 @@ export const HorizontalSeperator = styled.View`
   border: 0.2px solid #cbcbcb;
 `;
 
+export const PaddingView = styled.View`
+  padding-right: 16px;
+  padding-left: 16px;
+`;
+
 // ACCOUNT STYLES
 
 export const ListView = styled.View`

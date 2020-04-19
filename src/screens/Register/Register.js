@@ -18,6 +18,7 @@ import AppIcon from '../../assets/AppLogo';
 import MessageIcon from '../../assets/MessageIcon';
 import LockIcon from '../../assets/LockIcon';
 import UserIcon from '../../assets/UserIcon';
+import { PLACEHOLDER_COLOR } from '../../Themes/Themes';
 
 const Register = (props) => {
   const [formInput, setFormInput] = useState({
@@ -124,6 +125,7 @@ const Register = (props) => {
             />
           </IconContainer>
           <StyledTextInput
+            placeholderTextColor={PLACEHOLDER_COLOR}
             onChangeText={(value) => handleFormInput('name', value)}
             onFocus={() => handleFocusInput('name')}
             onBlur={() => handleBlur('name')}
@@ -144,6 +146,7 @@ const Register = (props) => {
             />
           </IconContainer>
           <StyledTextInput
+            placeholderTextColor={PLACEHOLDER_COLOR}
             onChangeText={(value) => handleFormInput('email', value)}
             onFocus={() => handleFocusInput('email')}
             onBlur={() => handleBlur('email')}
@@ -164,6 +167,7 @@ const Register = (props) => {
             />
           </IconContainer>
           <StyledTextInput
+            placeholderTextColor={PLACEHOLDER_COLOR}
             onChangeText={(value) => handleFormInput('password', value)}
             onFocus={() => handleFocusInput('password')}
             onBlur={() => handleBlur('password')}
@@ -185,6 +189,7 @@ const Register = (props) => {
             />
           </IconContainer>
           <StyledTextInput
+            placeholderTextColor={PLACEHOLDER_COLOR}
             onChangeText={(value) => handleFormInput('confirmPassword', value)}
             onFocus={() => handleFocusInput('confirmPassword')}
             onBlur={() => handleBlur('confirmPassword')}

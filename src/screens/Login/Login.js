@@ -26,6 +26,7 @@ import {AsyncStorage} from 'react-native';
 import {withTheme} from 'styled-components';
 import {connect} from 'react-redux';
 import {toggleTheme, setLogin} from '../../actions';
+import {PLACEHOLDER_COLOR} from '../../Themes/Themes';
 
 const Login = (props) => {
   const [formInput, setFormInput] = useState({
@@ -116,6 +117,7 @@ const Login = (props) => {
             />
           </IconContainer>
           <StyledTextInput
+            placeholderTextColor={PLACEHOLDER_COLOR}
             onChangeText={(value) => handleFormInput('email', value)}
             onFocus={() => handleFocusInput('email')}
             onBlur={() => handleBlur('email')}
@@ -136,6 +138,7 @@ const Login = (props) => {
             />
           </IconContainer>
           <StyledTextInput
+            placeholderTextColor={PLACEHOLDER_COLOR}
             onChangeText={(value) => handleFormInput('password', value)}
             onFocus={() => handleFocusInput('password')}
             onBlur={() => handleBlur('password')}
@@ -166,7 +169,7 @@ const Login = (props) => {
             Forgot Password?
           </StyledText>
         </MarginContainer>
-        <MarginContainer theme="8px">
+        <MarginContainer style={{paddingBottom: 20}} theme="8px">
           <StyledText
             theme={{weight: 'normal', size: '12px', color: '#9098B1'}}>
             Don’t have a account?{' '}
