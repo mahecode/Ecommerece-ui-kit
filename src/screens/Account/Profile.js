@@ -18,14 +18,12 @@ import {connect} from 'react-redux';
 import {toggleTheme} from '../../actions';
 
 const Profile = (props) => {
-
   const handleButtonTheme = () => {
-    if (props.mode === 'light') {
-      AsyncStorage.setItem('theme', 'dark');
-      props.toggleTheme();
-    }
     if (props.mode === 'dark') {
       AsyncStorage.setItem('theme', 'light');
+      props.toggleTheme();
+    } else {
+      AsyncStorage.setItem('theme', 'dark');
       props.toggleTheme();
     }
   };
@@ -76,9 +74,9 @@ const Profile = (props) => {
                   weight: 'bold',
                   size: '12px',
                 }}>
-                {props.mode === 'light'
-                  ? 'Switch To Dark Mode'
-                  : 'Switch To Light Mode'}
+                {props.mode === 'dark'
+                  ? 'Switch To Light Mode'
+                  : 'Switch To Dark Mode'}
               </StyledText>
             </View>
           </MarginContainer>

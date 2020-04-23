@@ -78,3 +78,26 @@ export const ListView = styled.View`
   padding-right: 16px;
   padding-left: 16px;
 `;
+
+// CART PRODUCT
+
+export const CartProductContainer = styled.View`
+  width: 100%;
+  height: 104px;
+  border: 1px solid #cbcbcb;
+  flex-direction: row;
+  margin-top: 16px;
+  justify-content: space-around;
+`;
+
+// BILLING STYLES
+
+export const BillingContainer = styled.View`
+  width: 100%;
+  height: 184px;
+  border: 1px solid #cbcbcb;
+  margin-top: 16px;
+  margin-bottom: 20px;
+  padding-left: 16px;
+  padding-right: 16px;
+`;

@@ -16,7 +16,7 @@ export const TextInputContainer = styled.View`
 `;
 
 export const StyledTextInput = styled.TextInput`
-  height: 48px;
+  height: ${(props) => (props.theme.height ? props.theme.height : '48px')};
   padding-horizontal: 50px;
   border: 1px solid ${(props) => (props.theme.focus ? '#40BFFF' : '#cbcbcb')};
   border-radius: 5px;
